@@ -6,7 +6,7 @@
 
 > Note: On Linux systems, given that users must install manually, it's permissible not to sign the installation package.
 
-[简体中文](./README-zh_CN.md)) | English
+[简体中文](./README-zh_CN.md) | English
 
 ## API
 
@@ -156,7 +156,7 @@ The format of the version list returned by the update server is as follows. Linu
 }
 ```
 
-Win格式如下：
+Win format：
 
 ```
 B54F68436459E0DDF06CDDEB96DEDADED6082066 http://162.1.1.69:9999/pcclient/e1ad93770345249aeb962d450314e9ef/win32/arm64/luck-pc-client-arm64-1.1.3-full.nupkg 147072854
