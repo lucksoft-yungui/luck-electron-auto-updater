@@ -1,18 +1,18 @@
 # luck-electron-auto-updater
 
-`luck-electron-auto-updater` is an enhancement of the native `autoUpdater`. While the native `autoUpdater` only supports the Squirrel program on Mac and Windows, this module additionally introduces support for Linux (Ubuntu). It's essential to note that the behavior on Linux differs: it merely notifies users of an update and, after downloading, guides them to open the file, requiring manual installation.
+`luck-electron-auto-updater` 对原生 `autoUpdater` 进行了扩展。虽然原生的 `autoUpdater` 只支持Mac和Windows的Squirrel程序，但此组件还增加了对Linux（Ubuntu）的支持。需要注意的是，Linux下的行为有所不同：它只提示用户进行更新，并在下载后引导用户打开文件，需要手动安装。
 
 ![Updater Image](images/16acbcd569be3e6f26756396924b9dcc7bf5828658df7a29fa620a5c5d9ab2e3.png)  
 
-> Note: On Linux systems, given that users must install manually, it's permissible not to sign the installation package.
+> 注意：在Linux系统下，由于需要用户手动安装，安装包可以不进行签名。
 
-[简体中文](./README-zh_CN.md)) | English
+[English](./README.md) | 简体中文
 
 ## API
 
-The interfaces and events of this module remain consistent with the native `autoUpdater`.
+本组件的接口和事件与原生 `autoUpdater` 一致。
 
-### Events
+### 事件
 - error
 - checking-for-update
 - update-available
@@ -20,19 +20,19 @@ The interfaces and events of this module remain consistent with the native `auto
 - update-downloaded
 - before-quit-for-update
 
-### Methods
+### 方法
 - setFeedURL
 - getFeedURL
 - checkForUpdates
 - quitAndInstall
 
-For more details, refer to the [autoUpdater Official Documentation](https://www.electronjs.org/docs/latest/api/auto-updater).
+更多详情，请参考 [autoUpdater 官方文档](https://www.electronjs.org/docs/latest/api/auto-updater)。
 
-## Lifecycle
+## 生命周期
 
-The lifecycle and event-triggering sequence of this module are the same as the native component. The only difference is that on Mac and Windows systems, the `quitAndInstall` method will update and exit. In contrast, on Linux, it only opens the location of the downloaded file.
+本组件的生命周期与事件触发顺序与原生组件相同。区别在于，在Mac和Windows系统中，`quitAndInstall` 方法会更新并退出；而在Linux系统下，只会打开下载文件的位置。
 
-## Usage Example
+## 使用示例
 
 ```
 const { app, dialog } = require('electron')
@@ -103,6 +103,7 @@ app.whenReady().then(() => {
 });
 ```
 
+配置示例，这里的服务端使用的是：[nucleus](https://github.com/atlassian/nucleus)，请根据自己的服务端调整相关的代码和配置逻辑。
 ```
  autoUpdate: {
         // 是否启用自动更新
@@ -124,9 +125,9 @@ app.whenReady().then(() => {
     },
 ```
 
-## Server Response Format
+## 服务端返回的格式
 
-The format of the version list returned by the update server is as follows. Linux and Mac systems share a format, while Windows has its unique format.
+更新服务器返回的版本清单格式如下。Linux和Mac系统的格式保持一致，而Windows有其专属格式。
 
 ```
 {
@@ -162,7 +163,7 @@ Win格式如下：
 B54F68436459E0DDF06CDDEB96DEDADED6082066 http://162.1.1.69:9999/pcclient/e1ad93770345249aeb962d450314e9ef/win32/arm64/luck-pc-client-arm64-1.1.3-full.nupkg 147072854
 ```
 
-## Testing
+## 测试
 
 ```
 npm run test
