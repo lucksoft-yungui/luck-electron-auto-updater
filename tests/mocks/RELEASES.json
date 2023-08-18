@@ -1,0 +1,15 @@
+{
+    "releases": [
+        {
+            "version": "1.1.4",
+            "updateTo": {
+                "version": "1.1.4",
+                "pub_date": "Tue Aug 15 2023 13:45:08 GMT+0800 (CST)",
+                "notes": "",
+                "name": "1.1.4",
+                "url": "http://local.mock.com/pcclient/e1ad93770345249aeb962d450314e9ef/linux/arm64/luck-pc-client_1.1.4_arm64.deb"
+            }
+        }
+    ],
+    "currentRelease": "1.1.4"
+}
