@@ -118,8 +118,6 @@ app.whenReady().then(() => {
         channel: "e1ad93770345249aeb962d450314e9ef",
         // app id
         appId: 1,
-        // app token
-        token: '960221a59f2788404ab848db4519592b',
         // 应用更新检测频率，默认每天提醒一次
         freq: 86400000
     },

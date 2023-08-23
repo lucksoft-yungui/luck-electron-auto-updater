@@ -89,39 +89,37 @@ autoUpdater.setFeedURL({
 
 app.whenReady().then(() => {
 
-    // 默认在启用启动时检查一次更新
+    // Check for updates once by default when enabled at startup
     setTimeout(() => {
         log.log('auto-update checkForUpdates');
         autoUpdater.checkForUpdates();
     }, 10000);
 
-    // 定时检查更新
+    // Periodically check for updates
     setInterval(() => {
         log.log('auto-update interval checkForUpdates');
-        autoUpdater.checkForUpdates()
+        autoUpdater.checkForUpdates();
     }, freq);
 });
 ```
 
 ```
  autoUpdate: {
-        // 是否启用自动更新
+        // Enable or disable auto-updates
         enable: true,
-        // 更新服务地址
+        // Address of the update service
         domain: "http://162.1.1.69:9999",
-        // 更新服务中的应用名称
+        // Application name in the update service
         appName: "pcclient",
-        //publish server
-        updateServer:'http://162.1.1.69:8888',
-        // 更新频道id
+        // Publish server
+        updateServer: 'http://162.1.1.69:8888',
+        // Channel ID for the update
         channel: "e1ad93770345249aeb962d450314e9ef",
-        // app id
+        // App ID
         appId: 1,
-        // app token
-        token: '960221a59f2788404ab848db4519592b',
-        // 应用更新检测频率，默认每天提醒一次
+        // Frequency of checking app updates, reminds once a day by default
         freq: 86400000
-    },
+    }
 ```
 
 ## Server Response Format
