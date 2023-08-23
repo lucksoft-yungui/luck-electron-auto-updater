@@ -166,3 +166,7 @@ B54F68436459E0DDF06CDDEB96DEDADED6082066 http://162.1.1.69:9999/pcclient/e1ad937
 ```
 npm run test
 ```
+
+## 应用发布服务端
+
+您可以使用[electron-update-server](https://github.com/lucksoft-yungui/electron-update-server)应用发布服务端进行应用版本的管理和分发。该项目目前支持`darwin`、`win32`、`linux(ubuntu)`平台以及`x64`、`arm64`架构的应用管理。

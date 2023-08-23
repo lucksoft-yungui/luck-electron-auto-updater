@@ -165,3 +165,7 @@ B54F68436459E0DDF06CDDEB96DEDADED6082066 http://162.1.1.69:9999/pcclient/e1ad937
 ```
 npm run test
 ```
+
+## Update Server
+
+You can use the [electron-update-server](https://github.com/lucksoft-yungui/electron-update-server) application publishing server for application version management and distribution. The project currently supports the `darwin`, `win32`, `linux(ubuntu)` platforms as well as application management under the `x64` and `arm64` architectures.
